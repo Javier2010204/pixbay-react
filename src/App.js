@@ -8,9 +8,17 @@ class App extends Component {
     termino: ''
   }
 
+  consultarApi = ()=>{
+    const url = `https://pixabay.com/api/?key={}&q=${this.state.termino}`
+
+    console.log(url);
+  }
+
   datosBusqueda = (termino)=>{
     this.setState({
       termino
+    }, ()=>{
+      this.consultarApi()
     })
   }
 
