@@ -13,7 +13,7 @@ class App extends Component {
   consultarApi = ()=>{
 
     const termino = this.state.termino
-    const url = `https://pixabay.com/api/videos/?key=12822344-ea389e01f680651d496ba97c1&q=${termino}&per_page=40`
+    const url = `https://pixabay.com/api/?key=12822344-ea389e01f680651d496ba97c1&q=${termino}&image_type=photo`
 
     //console.log(url);
     fetch(url)
@@ -38,9 +38,11 @@ class App extends Component {
             datosBusqueda={this.datosBusqueda}
           />
         </div>
-        <Resultado
-          imagenes={this.state.imagenes}
-        />
+        <div className="row justify-content-center">
+          <Resultado
+            imagenes={this.state.imagenes}
+          />
+        </div>
       </div>
     );
   }
