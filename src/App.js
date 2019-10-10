@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Buscador from './components/Buscador';
 import Resultado from './components/Resultado';
 
+//https://pxhere.com/
+
 
 class App extends Component {
 
